@@ -32,5 +32,8 @@ public class TodoItem {
     @JoinColumn(name = "category_id")
     private Category category;
 
+    @Builder.Default
+    @Column(nullable=false)
+    private Boolean isDone = false;
 
 }

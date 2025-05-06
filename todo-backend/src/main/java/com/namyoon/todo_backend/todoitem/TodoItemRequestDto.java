@@ -12,5 +12,6 @@ import lombok.Setter;
 public class TodoItemRequestDto {
     private String content;
     private Long categoryId;
+    private Boolean isDone;
     
 }

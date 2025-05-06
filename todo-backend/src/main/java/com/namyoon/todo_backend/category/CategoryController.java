@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequiredArgsConstructor
 @RequestMapping("/api/categories")
 public class CategoryController {
- 
+
     public final CategoryService categoryService;
 
     @PostMapping
     public CategoryResponseDto createCategory(@RequestBody CategoryRequestDto requestDto){
-    return categoryService.saveCategory(requestDto);
+        return categoryService.saveCategory(requestDto);
     }
     
     @GetMapping
