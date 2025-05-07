@@ -31,6 +31,9 @@ public class TodoItem {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+    
+    @Column(nullable = false)
+    private Boolean isDone;
 
 
 }
