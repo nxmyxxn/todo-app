@@ -13,7 +13,7 @@ const CategoryPage = () => {
   //the empty dependency array[] means this will run only once when the component mounts.
   useEffect(() => {
     //get request to server and it response with res
-    axios.get("http://localhost:8080/api/categories")
+    axios.get("http://localhost:8081/api/categories")
       .then((res) => setCategories(res.data))  //save the category list in react state
       .catch((err) => console.error("불러오기 실패", err));
       

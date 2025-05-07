@@ -18,7 +18,7 @@ public class TodoItemServiceImpl implements TodoItemService{
     private final CategoryRepository categoryRepository;
 
     @Override
-    public TodoItemResponseDto addTodoItem(TodoItemRequestDto dto){
+    public TodoItemResponseDto createTodoItem(TodoItemRequestDto dto){
         Category category = categoryRepository.findById(dto.getCategoryId())
             .orElseThrow(()-> new RuntimeException("Category not found"));
 

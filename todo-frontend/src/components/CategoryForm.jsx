@@ -8,7 +8,7 @@ function CategoryForm({ onAddCategory }) {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:8080/api/categories", { name });
+      const res = await axios.post("http://localhost:8081/api/categories", { name });
       onAddCategory(res.data); // 부모에게 새 카테고리 전달
       setName(""); // 입력창 초기화
     } catch (error) {

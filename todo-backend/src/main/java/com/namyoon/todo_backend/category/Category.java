@@ -29,8 +29,7 @@ public class Category {
     @Column
     private String name;
 
+    @Builder.Default
     @OneToMany(mappedBy="category", cascade=CascadeType.ALL)
     private List<TodoItem> items = new ArrayList<>();
-
-   
 }
